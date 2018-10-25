@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head_title %} Sign Up || {{ block.super }} {% endblock head_title %}
+
+{% block content %}
+<h1> Sign Uppp</h1>
+{% if error %}
+{{ error }}
+{% endif %}
+<div id="Input">
+			<fieldset>
+				
+				<form id="persona" method="post"><br> {% csrf_token %}
+					
+					{{ form.as_p }}
+        			
+					<input type="submit" id="sub" value="Submit">
+					
+
+				</form>
+			</fieldset>
+			
+</div>
+
+{% endblock content %}
